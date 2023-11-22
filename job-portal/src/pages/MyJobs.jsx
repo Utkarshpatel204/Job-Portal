@@ -50,7 +50,7 @@ const MyJobs = () => {
 // delete a books
 const handleDelete = (id) => {
   // console.log(id)
-  fetch(`http://localhost:5000/job/${id}`, {
+  fetch(`job-portal-five-vert.vercel.app/job/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
