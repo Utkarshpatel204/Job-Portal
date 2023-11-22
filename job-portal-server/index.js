@@ -1,3 +1,9 @@
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+
+
+const __dirname = path.resolve();
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -9,6 +15,11 @@ require('dotenv').config()
 app.use(express.json());
 app.use(cors())
 
+app.use(express.static(path.join(__dirname,'job-portal/dist')));
+
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'client','dist','index.html'));
+})
 
 // replace username(${process.env.DB_USER}) and password(${process.env.DB_PASS}) here
 
