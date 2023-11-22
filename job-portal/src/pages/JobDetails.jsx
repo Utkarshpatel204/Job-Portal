@@ -9,7 +9,7 @@ const JobDetails = () => {
   console.log(id);
   const [job, setJob] = useState([]);
   useEffect(() => {
-    fetch(`job-portal-five-vert.vercel.app/all-jobs/${id}`)
+    fetch(`https://lazy-gray-grasshopper-cuff.cyclic.app/all-jobs/${id}`)
       .then((res) => res.json())
       .then((data) => setJob(data));
   }, []);

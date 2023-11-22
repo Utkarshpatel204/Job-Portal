@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("job-portal-five-vert.vercel.app/all-jobs")
+    fetch("https://lazy-gray-grasshopper-cuff.cyclic.app/all-jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);

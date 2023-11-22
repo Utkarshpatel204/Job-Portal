@@ -24,7 +24,7 @@ const UpdateJob = () => {
     data.skills = selectedOption;
     // console.log(data)
      // update the book object
-     fetch(`job-portal-five-vert.vercel.app/update-job/${id}`, {
+     fetch(`https://lazy-gray-grasshopper-cuff.cyclic.app/update-job/${id}`, {
       method: "PATCH",
 
       headers: {
